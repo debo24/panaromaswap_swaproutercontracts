@@ -2,10 +2,11 @@
 pragma solidity >=0.5.0;
 
 import 'panaromaswap_v2core/contracts/interfaces/IPanaromaswapV2Pair.sol';
-import 'panaromaswap_v3core/contracts/libraries/LowGasSafeMath.sol';
+//import 'panaromaswap_v3core/contracts/libraries/LowGasSafeMath.sol';
+import './_LowGasSafeMath.sol';
 
 library PanaromaswapV2Library {
-    using LowGasSafeMath for uint256;
+    using _LowGasSafeMath for uint256;
 
     // returns sorted token addresses, used to handle return values from pairs sorted in this order
     function sortTokens(address tokenA, address tokenB) internal pure returns (address token0, address token1) {
